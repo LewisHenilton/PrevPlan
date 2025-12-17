@@ -1,6 +1,6 @@
 'use client';
 
-  import { LineChart, Line, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ComposedChart } from 'recharts';
+  import { Line, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ComposedChart } from 'recharts';
   import type { MonteCarloChartData } from '@/lib/montecarlo';
 
   interface MonteCarloChartProps {

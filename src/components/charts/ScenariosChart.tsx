@@ -1,6 +1,6 @@
 'use client';
 
-  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Cell } from 'recharts';
+  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
   import { calculateSimulation } from '@/lib/calculations';
   import type { SimulationResults } from '@/types/simulation';
 

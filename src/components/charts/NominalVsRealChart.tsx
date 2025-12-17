@@ -31,7 +31,7 @@
           Comparação entre o valor futuro e seu poder de compra real (em dinheiro de hoje)
         </p>
         <p className="text-sm text-amber-600 font-medium mb-4">
-          ⚠️ Com {inflationRate.toFixed(2)}% de inflação ao ano, você "perde" {lossPercentage}% do poder de compra!
+          ⚠️ Com {inflationRate.toFixed(2)}% de inflação ao ano, você &apos;perde&apos; {lossPercentage}% do poder de compra!
         </p>
 
         <ResponsiveContainer width="100%" height={400}>

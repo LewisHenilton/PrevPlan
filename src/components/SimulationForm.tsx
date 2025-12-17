@@ -13,10 +13,10 @@ import StackedAreaChart from './charts/StackedAreaChart';
 import ScenariosChart from './charts/ScenariosChart';
 import FundosComparator from './FundosComparator';
 import MonteCarloChart from './charts/MonteCarloChart';
-import { Button, Card } from '@/components/ui';
+import { Button } from '@/components/ui';
 import { calculateSimulation } from '@/lib/calculations';
 import { useBacenData } from '@/hooks/useBacenData';
-import { fundosPrevidencia, type FundoPrevidencia } from '@/data/fundos';
+import { fundosPrevidencia } from '@/data/fundos';
 import { processMonteCarloForChart } from '@/lib/montecarlo';
 import { useMonteCarloWorker } from '@/hooks/useMonteCarloWorker'; // ← ADICIONAR
 
@@ -245,7 +245,7 @@ export default function SimulationForm() {
         if (saved.currentAge !== undefined) setValue('currentAge', Number(saved.currentAge));
       } catch {}
       setIsInitialized(true);
-    }, []);
+    }, [setValue]);
 
     return (
     <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg">
@@ -533,7 +533,7 @@ export default function SimulationForm() {
 
             {savedSimulations.length > 0 && (
               <p className="text-xs text-gray-500 mt-4 text-center">
-                💡 Dica: Clique em "📂 Carregar" para preencher o formulário com valores salvos
+                💡 Dica: Clique em &apos;📂 Carregar&apos; para preencher o formulário com valores salvos
               </p>
             )}
           </div>

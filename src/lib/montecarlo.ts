@@ -81,11 +81,11 @@ export interface MonteCarloParams {
       meanReturn,
       volatility,
       years,
-      currentAge,
+      currentAge: _currentAge,
       adminFee,
       loadingFee,
       productType,
-      inflation = 0,
+      inflation: _inflation = 0,
       numSimulations = 1000,
     } = params;
 

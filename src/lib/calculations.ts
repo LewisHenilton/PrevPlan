@@ -37,8 +37,7 @@ export function calculateSimulation(input: SimulationInput): SimulationResults {
   let balance = 0;
   let totalContributions = 0;
   const yearlyEvolution: YearlyEvolution[] = [];
-  let yearlyBalance = 0;
-  let yearlyContributions = 0;
+
   for (let i = 0; i < totalMonths; i++) {
     // 1. Aplicar taxa de carregamento no aporte
     const netContribution = monthlyContribution * (1 - loadingFee / 100);

@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useCallback} from 'react';
 interface BacenData {
     value: number;
     cached?: boolean;
@@ -24,7 +24,7 @@ export function useBacenData(
     const [loading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<string | null>(null);
 
-    const fetchData = async () => {
+    const fetchData = useCallback(async () => {
       if (!enabled) return;
 
       setLoading(true);
@@ -49,11 +49,11 @@ export function useBacenData(
       } finally {
         setLoading(false);
       }
-    };
+    }, [endpoint, enabled]);
 
     useEffect(() => {
       fetchData();
-    }, [endpoint, enabled]);
+    }, [endpoint, enabled, fetchData]);
 
     return {
       data,
